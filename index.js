@@ -1,7 +1,7 @@
 const constant = require('./constant');
 const { keyStr } = constant;
 base64 = {
-  encode: (input) => new Promise((resolve) => {
+  encode: (input) => {
     var output = "";
     var chr1, chr2, chr3 = "";
     var enc1, enc2, enc3, enc4 = "";
@@ -32,9 +32,9 @@ base64 = {
         enc1 = enc2 = enc3 = enc4 = "";
     } while (i < input.length);
 
-    return resolve(output);
-  }),
-  decode: (input) => new Promise((resolve, reject) => {
+    return output;
+  },
+  decode: (input) => {
     var output = "";
     var chr1, chr2, chr3 = "";
     var enc1, enc2, enc3, enc4 = "";
@@ -43,7 +43,7 @@ base64 = {
     // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
     var base64test = /[^A-Za-z0-9\+\/\=]/g;
     if (base64test.exec(input)) {
-      return reject(constant.RESPONSE_MESSAGE.INVALID_BASE64);
+      throw new Error(constant.RESPONSE_MESSAGE.INVALID_BASE64);
     }
     input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
 
@@ -71,8 +71,8 @@ base64 = {
 
     } while (i < input.length);
 
-    return resolve(output);
-  }),
+    return output;
+  },
 };
 
 module.exports = base64;
