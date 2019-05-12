@@ -1,0 +1,8 @@
+{
+  "name": "hacktiv8-base64",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ranggakusuma/Hacktiv8-Base64.git",
+  "author": "ranggakusuma <ranggavskusuma@gmail.com>",
+  "license": "MIT"
+}
