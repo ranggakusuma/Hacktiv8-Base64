@@ -1,6 +1,6 @@
 const constant = require('./constant');
 const { keyStr } = constant;
-module.exports = {
+base64 = {
   encode: (input) => new Promise((resolve) => {
     var output = "";
     var chr1, chr2, chr3 = "";
@@ -74,3 +74,8 @@ module.exports = {
     return resolve(output);
   }),
 };
+
+module.exports = base64;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = base64;

@@ -1,8 +1,20 @@
 {
   "name": "hacktiv8-base64",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "Base64 encoding and decoding helping util",
   "main": "index.js",
   "repository": "https://github.com/ranggakusuma/Hacktiv8-Base64.git",
-  "author": "ranggakusuma <ranggavskusuma@gmail.com>",
-  "license": "MIT"
+  "author": "ranggakusuma",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "base64",
+    "encode",
+    "decode",
+    "react",
+    "native"
+  ],
+  "homepage": "https://github.com/ranggakusuma/Hacktiv8-Base64.git#readme"
 }
